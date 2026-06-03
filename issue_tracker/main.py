@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSmiddleware
+from fastapi.middleware.cors import CORSMiddleware
 from app.routes.issues import router as issues_router
 from app.middleware.timing import timing_middleware
 app = FastAPI(
@@ -18,7 +18,7 @@ app.include_router(issues_router)
 
 app.middleware("http")(timing_middleware)
 
-app.add_middleware(CORSMIDDLEARE,
+app.add_middleware(CORSMiddleware,
                    Allow_origins=["*"],
                    Allow_methods=["*"],
                    Allow_credentials=True,
