@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IssueFlow SaaS Dashboard</title>
+    <link rel="stylesheet" href="/ui/styles.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <h2>IssueFlow</h2>
+            <button onclick="openModal()">+ New Issue</button>
+
+            <div class="menu">
+                <p>Dashboard</p>
+                <p>Issues</p>
+                <p>Settings</p>
+            </div>
+        </div>
+
+        <!-- MAIN -->
+        <div class="main">
+
+            <!-- STATS -->
+            <div class="stats">
+                <div class="card">Total <span id="total">0</span></div>
+                <div class="card">Open <span id="open">0</span></div>
+                <div class="card">Closed <span id="closed">0</span></div>
+            </div>
+
+            <!-- ISSUES -->
+            <div id="issues" class="issues"></div>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>Create Issue</h3>
+
+            <input id="title" placeholder="Title">
+            <textarea id="description" placeholder="Description"></textarea>
+
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <button onclick="createIssue()">Create</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="/ui/app.js"></script>
+
+</body>
+
+</html>

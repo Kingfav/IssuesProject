@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f7fb;
+}
+
+.layout {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background: #111827;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    gap: 10px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ISSUES */
+.issues {
+    margin-top: 20px;
+}
+
+.issue {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    margin: 100px auto;
+    border-radius: 10px;
+}

@@ -1,3 +1,5 @@
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes.issues import router as issues_router
@@ -7,6 +9,14 @@ app = FastAPI(
     version="0.1.0",
     description="A mini production-style API built with FastAPI",
 )
+
+
+app.mount("/ui", StaticFiles(directory="ui"), name="ui")
+
+
+@app.get("/")
+def home():
+    return FileResponse("issue_tracker/ui/index.html")
 
 
 @app.get("/health")
