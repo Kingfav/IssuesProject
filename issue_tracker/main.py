@@ -16,7 +16,7 @@ app.mount("/ui", StaticFiles(directory="ui"), name="ui")
 
 @app.get("/")
 def home():
-    return FileResponse("issue_tracker/ui/index.html")
+    return FileResponse("ui/index.html")
 
 
 @app.get("/health")
